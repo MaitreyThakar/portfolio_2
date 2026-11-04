@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maitreythakar.github.io/sitemap.xml
+

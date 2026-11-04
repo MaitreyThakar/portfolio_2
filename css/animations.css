@@ -1,0 +1,160 @@
+/* ==========================================================================
+   ANIMATIONS & MOTION SYSTEM
+   Maitrey Thakar Portfolio — GSAP, Keyframes & Accessibility
+   ========================================================================== */
+
+/* ==========================================================================
+   1. PAGE LOAD INTRO LOADER
+   ========================================================================== */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background-color: #0A0A0B;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(2rem, 5vw, 4rem);
+  pointer-events: all;
+  transition: transform 0.85s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.loader-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.loader-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.loader-brand {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 12vw, 10rem);
+  text-transform: uppercase;
+  line-height: 0.85;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.loader-brand-dot {
+  color: var(--accent);
+}
+
+.loader-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.loader-counter {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 0.9;
+  color: var(--accent);
+}
+
+.loader-status {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* Wiped out state */
+.page-loader.dismissed {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   2. MASKED TEXT REVEAL UTILITIES
+   ========================================================================== */
+.mask-wrap {
+  overflow: hidden;
+  display: block;
+}
+
+.mask-child {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-ready .mask-child.revealed {
+  transform: translateY(0);
+}
+
+/* Progressive enhancement: when JS is NOT enabled, never hide mask children */
+html:not(.js-ready) .mask-child {
+  transform: translateY(0) !important;
+}
+
+/* ==========================================================================
+   3. TECH MARQUEE ANIMATION
+   ========================================================================== */
+.marquee-track {
+  animation: marqueeLoop 28s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================================================
+   4. PREFERS-REDUCED-MOTION OVERRIDES (MANDATORY)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .page-loader {
+    display: none !important;
+  }
+
+  .mask-child {
+    transform: none !important;
+  }
+
+  .floating-cursor,
+  .custom-cursor-dot,
+  .custom-cursor-follower {
+    display: none !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .scroll-line {
+    animation: none !important;
+  }
+}
+

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" fill="none">
+  <rect width="800" height="500" fill="#0E0E11"/>
+  <!-- Subtle Grid -->
+  <pattern id="gridRAG" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1C1C22" stroke-width="1"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#gridRAG)"/>
+
+  <!-- Glowing vector nodes & documents -->
+  <g transform="translate(60, 60)">
+    <!-- PDF Document Node -->
+    <rect x="20" y="80" width="160" height="200" rx="12" fill="#141418" stroke="#2B2B33" stroke-width="1.5"/>
+    <rect x="40" y="110" width="80" height="12" rx="4" fill="#C6FF3D" opacity="0.9"/>
+    <rect x="40" y="140" width="120" height="6" rx="3" fill="#3D3D45"/>
+    <rect x="40" y="160" width="100" height="6" rx="3" fill="#3D3D45"/>
+    <rect x="40" y="180" width="110" height="6" rx="3" fill="#3D3D45"/>
+    <rect x="40" y="200" width="70" height="6" rx="3" fill="#3D3D45"/>
+    <text x="40" y="250" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#8A8A8F">HR_POLICY.PDF</text>
+
+    <!-- Flow Arrow to Embeddings/ChromaDB -->
+    <path d="M 180 180 C 230 180, 230 180, 260 180" stroke="#C6FF3D" stroke-width="2" stroke-dasharray="4 4"/>
+    <polygon points="265,180 255,175 255,185" fill="#C6FF3D"/>
+
+    <!-- ChromaDB Node -->
+    <rect x="270" y="100" width="160" height="160" rx="16" fill="#141418" stroke="#C6FF3D" stroke-width="1.5"/>
+    <circle cx="350" cy="160" r="34" fill="#1A1A22" stroke="#C6FF3D" stroke-width="1.5"/>
+    <circle cx="335" cy="150" r="4" fill="#C6FF3D"/>
+    <circle cx="365" cy="150" r="4" fill="#C6FF3D"/>
+    <circle cx="350" cy="175" r="4" fill="#C6FF3D"/>
+    <path d="M 335 150 L 365 150 L 350 175 Z" stroke="#C6FF3D" stroke-width="1.2" fill="none" opacity="0.5"/>
+    <text x="312" y="224" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F2F2F0">CHROMADB</text>
+
+    <!-- Flow Arrow to Ollama / LLM -->
+    <path d="M 430 180 C 470 180, 470 180, 500 180" stroke="#C6FF3D" stroke-width="2"/>
+    <polygon points="505,180 495,175 495,185" fill="#C6FF3D"/>
+
+    <!-- Ollama Inference Node -->
+    <rect x="510" y="60" width="170" height="240" rx="16" fill="#141418" stroke="#33333F" stroke-width="1.5"/>
+    <rect x="530" y="85" width="130" height="34" rx="8" fill="#1E1E26"/>
+    <text x="545" y="107" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#C6FF3D">LOCAL OLLAMA</text>
+    
+    <!-- Chat bubbles in stream -->
+    <rect x="530" y="135" width="110" height="36" rx="8" fill="#252530"/>
+    <text x="540" y="157" font-family="'Inter', sans-serif" font-size="10" fill="#8A8A8F">Q: Leave policy?</text>
+    <rect x="545" y="185" width="115" height="48" rx="8" fill="#0A0A0B" stroke="#C6FF3D" stroke-width="1"/>
+    <text x="555" y="206" font-family="'Inter', sans-serif" font-size="10" fill="#F2F2F0">A: Section 4.2...</text>
+    <text x="555" y="222" font-family="'Inter', sans-serif" font-size="9" fill="#C6FF3D">100% Offline RAG</text>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(620, 30)">
+    <rect width="130" height="28" rx="14" fill="#1F2812" stroke="#C6FF3D" stroke-width="1"/>
+    <text x="24" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#C6FF3D" letter-spacing="1">GENAI / RAG</text>
+  </g>
+</svg>
+

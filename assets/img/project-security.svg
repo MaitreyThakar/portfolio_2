@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" fill="none">
+  <rect width="800" height="500" fill="#0E0E11"/>
+  <!-- Circular radar grid -->
+  <circle cx="400" cy="250" r="180" stroke="#1F1F26" stroke-width="1.5"/>
+  <circle cx="400" cy="250" r="120" stroke="#1F1F26" stroke-width="1.5"/>
+  <circle cx="400" cy="250" r="60" stroke="#252530" stroke-width="1.5"/>
+  <line x1="400" y1="50" x2="400" y2="450" stroke="#1F1F26" stroke-width="1"/>
+  <line x1="200" y1="250" x2="600" y2="250" stroke="#1F1F26" stroke-width="1"/>
+
+  <!-- Radar sweep wedge -->
+  <path d="M 400 250 L 520 120 A 180 180 0 0 1 580 250 Z" fill="#C6FF3D" fill-opacity="0.08"/>
+
+  <!-- Center Shield Icon -->
+  <polygon points="400,195 440,215 440,265 400,295 360,265 360,215" fill="#141418" stroke="#C6FF3D" stroke-width="2.5"/>
+  <circle cx="400" cy="245" r="12" fill="#C6FF3D"/>
+
+  <!-- Threat Analysis Metric Cards -->
+  <g transform="translate(100, 110)">
+    <rect width="190" height="90" rx="12" fill="#141418" stroke="#2B2B33" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#8A8A8F">VULNERABILITY SCAN</text>
+    <text x="20" y="65" font-family="'Anton', sans-serif" font-size="28" fill="#F2F2F0" letter-spacing="1">ZERO CVEs</text>
+  </g>
+
+  <g transform="translate(510, 300)">
+    <rect width="190" height="90" rx="12" fill="#141418" stroke="#2B2B33" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#8A8A8F">ANOMALY SCORE</text>
+    <text x="20" y="65" font-family="'Anton', sans-serif" font-size="28" fill="#C6FF3D" letter-spacing="1">99.8% ACC</text>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(620, 30)">
+    <rect width="130" height="28" rx="14" fill="#1F2812" stroke="#C6FF3D" stroke-width="1"/>
+    <text x="26" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#C6FF3D" letter-spacing="1">AI / ML OPS</text>
+  </g>
+</svg>
+
