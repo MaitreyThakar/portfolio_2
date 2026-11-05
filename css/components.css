@@ -1426,16 +1426,24 @@ body.cursor-hover .custom-cursor-dot {
     display: none; /* Only show arrow on narrow mobile */
   }
 
-  /* Compact and visible bottom dock on mobile */
+  /* Compact and visible bottom dock on mobile with horizontal scroll if needed */
   .agent-dock {
-    bottom: 0.85rem;
-    padding: 0.35rem 0.6rem;
-    max-width: calc(100vw - 1.25rem);
-    width: auto;
+    bottom: 0.75rem;
+    padding: 0.3rem 0.5rem;
+    max-width: calc(100vw - 1rem);
+    width: max-content;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for sleek look */
+  }
+
+  .agent-dock::-webkit-scrollbar {
+    display: none;
   }
 
   .dock-inner {
-    gap: 0.5rem;
+    gap: 0.4rem;
+    flex-shrink: 0;
   }
 
   .dock-avatars {
@@ -1443,8 +1451,8 @@ body.cursor-hover .custom-cursor-dot {
   }
 
   .dock-avatar-dot {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     margin-left: -3px;
   }
 
@@ -1457,20 +1465,22 @@ body.cursor-hover .custom-cursor-dot {
   }
 
   .dock-status {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
   }
 
   .dock-controls {
-    gap: 0.25rem;
+    gap: 0.2rem;
+    flex-shrink: 0;
   }
 
   .dock-pill-btn {
-    font-size: 0.65rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.45rem;
+    white-space: nowrap;
   }
 
-  /* Hide Blueprint toggle on mobile since rulers are hidden */
+  /* Keep Blueprint toggle VISIBLE on mobile */
   #dock-btn-blueprint {
-    display: none !important;
+    display: inline-flex !important;
   }
 }
