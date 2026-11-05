@@ -264,9 +264,9 @@
 /* Layer 2: Center Photo / Silhouette Portrait */
 .hero-portrait-wrap {
   position: absolute;
-  top: 50%;
+  top: 64%;
   left: 50%;
-  transform: translate(-50%, -46%);
+  transform: translate(-50%, -15%);
   width: clamp(260px, 34vw, 480px);
   height: clamp(340px, 46vw, 620px);
   z-index: 2;
@@ -336,8 +336,9 @@
 .hero-scroll-hint {
   position: absolute;
   bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  right: clamp(1.5rem, 4vw, 3.5rem);
+  left: auto;
+  transform: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -500,7 +501,8 @@
   .hero-portrait-wrap {
     width: 240px;
     height: 320px;
-    transform: translate(-50%, -42%);
+    top: 64%;
+    transform: translate(-50%, -15%);
   }
 
   .stats-grid {
