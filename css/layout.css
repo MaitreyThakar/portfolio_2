@@ -264,10 +264,10 @@
 /* Layer 2: Center Photo / Silhouette Portrait */
 .hero-portrait-wrap {
   position: absolute;
-  top: 64%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -15%);
-  width: clamp(260px, 34vw, 480px);
+  transform: translate(-50%, -46%);
+  width: clamp(280px, 36vw, 500px);
   height: clamp(340px, 46vw, 620px);
   z-index: 2;
   pointer-events: none;
@@ -499,10 +499,10 @@
   }
 
   .hero-portrait-wrap {
-    width: 240px;
-    height: 320px;
-    top: 64%;
-    transform: translate(-50%, -15%);
+    width: 260px;
+    height: 340px;
+    top: 50%;
+    transform: translate(-50%, -46%);
   }
 
   .stats-grid {
