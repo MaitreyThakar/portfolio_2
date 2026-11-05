@@ -1422,13 +1422,55 @@ body.cursor-hover .custom-cursor-dot {
   .ruler-top, .ruler-left {
     display: none !important;
   }
+  .agent-cursor-badge {
+    display: none; /* Only show arrow on narrow mobile */
+  }
+
+  /* Compact and visible bottom dock on mobile */
+  .agent-dock {
+    bottom: 0.85rem;
+    padding: 0.35rem 0.6rem;
+    max-width: calc(100vw - 1.25rem);
+    width: auto;
+  }
+
+  .dock-inner {
+    gap: 0.5rem;
+  }
+
+  .dock-avatars {
+    padding-left: 0;
+  }
+
+  .dock-avatar-dot {
+    width: 10px;
+    height: 10px;
+    margin-left: -3px;
+  }
+
   .dock-status-agents {
     display: none;
   }
+
   .dock-status-divider {
     display: none;
   }
-  .agent-cursor-badge {
-    display: none; /* Only show arrow on narrow mobile */
+
+  .dock-status {
+    font-size: 0.68rem;
+  }
+
+  .dock-controls {
+    gap: 0.25rem;
+  }
+
+  .dock-pill-btn {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Hide Blueprint toggle on mobile since rulers are hidden */
+  #dock-btn-blueprint {
+    display: none !important;
   }
 }

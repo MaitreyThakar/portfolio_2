@@ -493,19 +493,24 @@
     display: flex;
   }
 
+  /* Hide the hero buttons on mobile so they don't cover/clash with photo */
+  .hero-cta-group {
+    display: none !important;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-backdrop-word {
-    font-size: clamp(5rem, 25vw, 9rem);
+    font-size: clamp(4.5rem, 22vw, 8rem);
   }
 
   .hero-portrait-wrap {
-    width: 300px;
-    height: 380px;
-    top: 48%;
-    transform: translate(-50%, -50%);
+    width: 270px;
+    height: 330px;
+    top: 56%;
+    transform: translate(-50%, -46%);
   }
 
   .stats-grid {
